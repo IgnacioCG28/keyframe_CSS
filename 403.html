@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de error 403</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+      html,
+      body {
+        font-size: 62.5%;
+        box-sizing: border-box;
+
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+        font-family: "Ubuntu";
+      }
+
+      .app {
+        font-size: 13rem;
+        padding: 1rem;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #54fe55;
+        text-align: center;
+        text-shadow: 0px 0px 20px;
+      }
+
+      .app .txt{
+        font-size: 2rem;
+      }
+
+      /*
+      *     Definición de keyframes llamado 'blink' para animación
+      *     de parpadeo.
+      */
+
+      @keyframes blink {
+        0%{
+            opacity: 0;
+        }
+        49%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 1;
+        }
+      }
+
+      @keyframes rainbow {
+        100%,0%{
+            opacity: #54fe55;
+        }
+        22%{
+            color: red;
+        }
+        44%{
+            opacity: blue;
+        }
+        66%{
+            opacity: rgb(255, 0, 191);
+        }
+        88%{
+            opacity: rgb(255, 123, 0);
+        }
+        
+      }
+
+      .blink{
+        animation: blink 1s linear;
+        animation-iteration-count: infinite;
+      }
+
+      .colorfull{
+        animation: rainbow 2.5s linear;
+		animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div>403</div>
+      <div class="txt"><span class="colorfull">Acceso prohibido</span><span class="blink">_</span></div>
+    </div>
+  </body>
+</html>
